@@ -24,7 +24,7 @@ def r_get_chain(word, words_by_length, index, chain)
   next_words = get_next_words(word, words_by_length[word.length.pred])
   next_words.eval_find do |next_word|
     r_get_chain(next_word, words_by_length, index + 1, chain)
-  end || nil
+  end
 end
 
 def make_length_buckets(words)
